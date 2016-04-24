@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MXE-o9-3vA">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Search Controller-->
+        <scene sceneID="0y1-bB-qKk">
+            <objects>
+                <viewController storyboardIdentifier="SearchDisPlayerController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MXE-o9-3vA" customClass="PZLSearchController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VHE-6P-939"/>
+                        <viewControllerLayoutGuide type="bottom" id="8YI-v9-NMo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="30C-DT-uaF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hUc-su-dRb" userLabel="Viewfenge">
+                                <rect key="frame" x="0.0" y="64" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.0" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="b3F-NK-Ddc"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQJ-9u-qET" userLabel="Viewnav">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JIK-qQ-p8v">
+                                        <rect key="frame" x="15" y="25" width="300" height="30"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sousuo" translatesAutoresizingMaskIntoConstraints="NO" id="DeW-au-I0M">
+                                                <rect key="frame" x="5" y="8" width="16" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="16" id="OjM-QY-6WX"/>
+                                                    <constraint firstAttribute="width" constant="16" id="W8U-JO-hiv"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入关键字词" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2NZ-0p-CNh">
+                                                <rect key="frame" x="36" y="0.0" width="264" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="DeW-au-I0M" firstAttribute="centerY" secondItem="JIK-qQ-p8v" secondAttribute="centerY" constant="1" id="1yv-po-BcQ"/>
+                                            <constraint firstAttribute="height" constant="30" id="80a-zv-qaq"/>
+                                            <constraint firstItem="DeW-au-I0M" firstAttribute="leading" secondItem="JIK-qQ-p8v" secondAttribute="leading" constant="5" id="9hd-hy-7GE"/>
+                                            <constraint firstAttribute="bottom" secondItem="2NZ-0p-CNh" secondAttribute="bottom" id="QHi-b1-OFP"/>
+                                            <constraint firstItem="2NZ-0p-CNh" firstAttribute="leading" secondItem="DeW-au-I0M" secondAttribute="trailing" constant="15" id="aRa-Jf-lqk"/>
+                                            <constraint firstAttribute="trailing" secondItem="2NZ-0p-CNh" secondAttribute="trailing" id="lJD-2u-x5a"/>
+                                            <constraint firstItem="2NZ-0p-CNh" firstAttribute="top" secondItem="JIK-qQ-p8v" secondAttribute="top" id="nJG-ew-Gk3"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Khb-hp-PS5">
+                                        <rect key="frame" x="321" y="19" width="48" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="iht-8x-I4T"/>
+                                        </constraints>
+                                        <state key="normal" title="取消">
+                                            <color key="titleColor" red="0.98431372549999996" green="0.0" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelBtn:" destination="MXE-o9-3vA" eventType="touchUpInside" id="GeS-Dx-dMf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="3Zm-KF-PlZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="JIK-qQ-p8v" secondAttribute="trailing" constant="60" id="Cx7-qF-B52"/>
+                                    <constraint firstItem="Khb-hp-PS5" firstAttribute="centerY" secondItem="JIK-qQ-p8v" secondAttribute="centerY" constant="1" id="DB5-7e-P7n"/>
+                                    <constraint firstAttribute="trailing" secondItem="Khb-hp-PS5" secondAttribute="trailing" constant="6" id="e4E-mO-mJR"/>
+                                    <constraint firstItem="JIK-qQ-p8v" firstAttribute="leading" secondItem="CQJ-9u-qET" secondAttribute="leading" constant="15" id="iku-WH-udM"/>
+                                    <constraint firstItem="Khb-hp-PS5" firstAttribute="leading" secondItem="JIK-qQ-p8v" secondAttribute="trailing" constant="6" id="ktz-kr-ERB"/>
+                                    <constraint firstItem="JIK-qQ-p8v" firstAttribute="top" secondItem="CQJ-9u-qET" secondAttribute="top" constant="25" id="mk8-eb-GH1"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pmC-wh-chU">
+                                <rect key="frame" x="0.0" y="65" width="375" height="602"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="MXE-o9-3vA" id="Oyd-fC-tGD"/>
+                                    <outlet property="delegate" destination="MXE-o9-3vA" id="3FF-KP-5GZ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hUc-su-dRb" firstAttribute="top" secondItem="30C-DT-uaF" secondAttribute="top" constant="64" id="AXD-C2-efb"/>
+                            <constraint firstAttribute="trailing" secondItem="CQJ-9u-qET" secondAttribute="trailing" id="Wpb-ik-dBa"/>
+                            <constraint firstAttribute="trailing" secondItem="hUc-su-dRb" secondAttribute="trailing" id="evW-fg-hJa"/>
+                            <constraint firstItem="hUc-su-dRb" firstAttribute="leading" secondItem="30C-DT-uaF" secondAttribute="leading" id="u4l-fE-Cxj"/>
+                            <constraint firstItem="CQJ-9u-qET" firstAttribute="leading" secondItem="30C-DT-uaF" secondAttribute="leading" id="ub6-y9-T6n"/>
+                            <constraint firstItem="CQJ-9u-qET" firstAttribute="top" secondItem="30C-DT-uaF" secondAttribute="top" id="yNk-b7-5tE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="AkQ-bc-zNN">
+                        <barButtonItem key="leftBarButtonItem" id="f2w-Bl-AiR"/>
+                        <barButtonItem key="rightBarButtonItem" title="取消" id="waT-tt-00g">
+                            <color key="tintColor" red="0.98431372549999996" green="0.0" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="myTableView" destination="pmC-wh-chU" id="MCe-c4-lt5"/>
+                        <outlet property="searchText" destination="2NZ-0p-CNh" id="1hh-jW-Md4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dSL-sW-jHG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="15049.5" y="-2704.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sousuo" width="19" height="19"/>
+    </resources>
+</document>
